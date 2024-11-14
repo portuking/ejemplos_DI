@@ -151,5 +151,10 @@ public class EjemploFx extends JFrame implements WindowListener{
         setSize(700,650);
         addMouseListener(new Raton());
     }
+
+    public void marcoAccionesRaton(){
+        setVisible(true);
+        
+    }
 }
 
