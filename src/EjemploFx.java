@@ -144,5 +144,12 @@ public class EjemploFx extends JFrame implements WindowListener{
         setSize(700, 650);
         addKeyListener(new Teclado());
     }
+
+    public void marcoRaton(){
+        setVisible(true);
+        setTitle("Ventana para uso de ratón");
+        setSize(700,650);
+        addMouseListener(new Raton());
+    }
 }
 

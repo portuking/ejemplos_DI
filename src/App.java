@@ -10,6 +10,7 @@ public class App {
         //ej.foto();
         //ej.boton();
         //ej.marcoVentana();
-        ej.marcoTeclado();
+        //ej.marcoTeclado();
+        ej.marcoRaton();
     }
 }
