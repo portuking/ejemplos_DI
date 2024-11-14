@@ -6,13 +6,42 @@ import java.awt.Frame;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class EjemploFx extends JFrame{
+public class EjemploFx extends JFrame implements WindowListener{
+
+    public void windowActivated(WindowEvent e){
+        System.out.println("Ventana activada");
+    }
+
+    public void windowDeactivated(WindowEvent e){
+        System.out.println("Ventana desactivada");
+    }
+
+    public void windowClosed(WindowEvent e) {
+        System.out.println("Ventana cerrada");
+    }
+
+    public void windowOpened(WindowEvent e){
+        System.out.println("Ventana abierta");
+    }
+
+    public void windowClosing(WindowEvent e){
+        System.out.println("Ventana cerrando");
+    }
     
+    public void windowIconified(WindowEvent e) {
+        System.out.println("Ventana minimizada");
+    }
+
+    public void windowDeiconified(WindowEvent e){
+        System.out.println("Ventana desminimizada");
+    }
+
     public void miMarco(){
         //setSize(500,300);
         //setLocation(500,300);
@@ -101,4 +130,19 @@ public class EjemploFx extends JFrame{
         add(panel, BorderLayout.CENTER);
         setVisible(true);
     }
+
+    public void marcoVentana(){
+        setVisible(true);
+        setSize(700, 650);
+        setTitle("Marco con ventana");
+        addWindowListener(new EjemploFx());
+    }
+
+    public void marcoTeclado(){
+        setVisible(true);
+        setTitle("Ventana para uso de teclado");
+        setSize(700, 650);
+        addKeyListener(new Teclado());
+    }
 }
+

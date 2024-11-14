@@ -8,6 +8,8 @@ public class App {
         //ej.marcoConColor();
         //ej.textos();
         //ej.foto();
-        ej.boton();
+        //ej.boton();
+        //ej.marcoVentana();
+        ej.marcoTeclado();
     }
 }
